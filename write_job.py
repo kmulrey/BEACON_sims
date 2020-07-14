@@ -69,44 +69,44 @@ energy=[31622776,100000000,316227766]
 
 seed = randint(0, 10000)
     
-write_file('10000',0, zenith[0], energy[0], seed[i]+1,'proton')
-write_file('10000',0, zenith[0], energy[0], seed[i]+2,'iron')
+write_file('10000',0, zenith[0], energy[0], seed+1,'proton')
+write_file('10000',0, zenith[0], energy[0], seed+2,'iron')
 
-write_file('10001',0, zenith[1], energy[0], seed[i]+3,'proton')
-write_file('10001',0, zenith[1], energy[0], seed[i]+4,'iron')
+write_file('10001',0, zenith[1], energy[0], seed+3,'proton')
+write_file('10001',0, zenith[1], energy[0], seed+4,'iron')
     
-write_file('10002',0, zenith[2], energy[0], seed[i]+5,'proton')
-write_file('10002',0, zenith[2], energy[0], seed[i]+6,'iron')
+write_file('10002',0, zenith[2], energy[0], seed+5,'proton')
+write_file('10002',0, zenith[2], energy[0], seed+6,'iron')
 
-write_file('10003',0, zenith[3], energy[0], seed[i]+7,'proton')
-write_file('10003',0, zenith[3], energy[0], seed[i]+8,'iron')
+write_file('10003',0, zenith[3], energy[0], seed+7,'proton')
+write_file('10003',0, zenith[3], energy[0], seed+8,'iron')
 
 ################################################################
 
-write_file('20000',0, zenith[0], energy[1], seed[i]+9,'proton')
-write_file('20000',0, zenith[0], energy[1], seed[i]+10,'iron')
+write_file('20000',0, zenith[0], energy[1], seed+9,'proton')
+write_file('20000',0, zenith[0], energy[1], seed+10,'iron')
 
-write_file('20001',0, zenith[1], energy[1], seed[i]+11,'proton')
-write_file('20001',0, zenith[1], energy[1], seed[i]+12,'iron')
+write_file('20001',0, zenith[1], energy[1], seed+11,'proton')
+write_file('20001',0, zenith[1], energy[1], seed+12,'iron')
     
-write_file('20002',0, zenith[2], energy[1], seed[i]+13,'proton')
-write_file('20002',0, zenith[2], energy[1], seed[i]+14,'iron')
+write_file('20002',0, zenith[2], energy[1], seed+13,'proton')
+write_file('20002',0, zenith[2], energy[1], seed+14,'iron')
 
-write_file('20003',0, zenith[3], energy[1], seed[i]+15,'proton')
-write_file('20003',0, zenith[3], energy[1], seed[i]+16,'iron')
+write_file('20003',0, zenith[3], energy[1], seed+15,'proton')
+write_file('20003',0, zenith[3], energy[1], seed+16,'iron')
 
 ################################################################
 
 
-write_file('30000',0, zenith[0], energy[2], seed[i]+17,'proton')
-write_file('30000',0, zenith[0], energy[2], seed[i]+18,'iron')
+write_file('30000',0, zenith[0], energy[2], seed+17,'proton')
+write_file('30000',0, zenith[0], energy[2], seed+18,'iron')
 
-write_file('30001',0, zenith[1], energy[2], seed[i]+19,'proton')
-write_file('30001',0, zenith[1], energy[2], seed[i]+20,'iron')
+write_file('30001',0, zenith[1], energy[2], seed+19,'proton')
+write_file('30001',0, zenith[1], energy[2], seed+20,'iron')
     
-write_file('30002',0, zenith[2], energy[2], seed[i]+21,'proton')
-write_file('30002',0, zenith[2], energy[2], seed[i]+22,'iron')
+write_file('30002',0, zenith[2], energy[2], seed+21,'proton')
+write_file('30002',0, zenith[2], energy[2], seed+22,'iron')
 
-write_file('30003',0, zenith[3], energy[2], seed[i]+23,'proton')
-write_file('30003',0, zenith[3], energy[2], seed[i]+24,'iron')
+write_file('30003',0, zenith[3], energy[2], seed+23,'proton')
+write_file('30003',0, zenith[3], energy[2], seed+24,'iron')
 
