@@ -3,10 +3,10 @@ from random import random
 from random import randint
 
 
-proton_dir='/vol/astro3/lofar/sim/kmulrey/beacon/BEACON_sims/jobs_proton/'
-iron_dir='/vol/astro3/lofar/sim/kmulrey/beacon/BEACON_sims/jobs_iron/'
+proton_dir='/user/kmulrey/beacon/BEACON_sims/jobs_proton/'
+iron_dir='/user/kmulrey/beacon/BEACON_sims/BEACON_sims/jobs_iron/'
 
-base_dir='/vol/astro7/lofar/kmulrey/sim/beacon/'
+base_dir='/user/kmulrey/beacon/BEACON_sims/'
 
 def write_file(event, azimuth, zenith, energy, seed, type):
 
@@ -15,43 +15,43 @@ def write_file(event, azimuth, zenith, energy, seed, type):
     part_id=''
     if type=='proton':
         part_id='14'
-        outfile=open(proton_dir+event+'_coreas_'+type+'.q','w')
+        outfile=open(proton_dir+event+'_corsika_'+type+'.q','w')
 
     if type=='iron':
         part_id='5626'
-        outfile=open(iron_dir+event+'_coreas_'+type+'.q','w')
+        outfile=open(iron_dir+event+'_corsika_'+type+'.q','w')
 
 
 
 
 
     outfile.write('#! /bin/bash\n')
-    outfile.write('#SBATCH --time=2-00:00:00\n')
+    #outfile.write('#SBATCH --time=2-00:00:00\n')
     #outfile.write('#SBATCH --output {0}/run/output/{1}_coreas_{2}-%j\n'.format(base_dir,event,part_id))
     #outfile.write('#SBATCH --error {0}/run/output/{1}_coreas_{2}-ERROR-%j\n'.format(base_dir,event,part_id))
 
-    outfile.write('umask 002\n')
-    outfile.write('export FLUPRO=/vol/optcoma/cr-simulations/fluka64\n')
+    #outfile.write('umask 002\n')
+    #outfile.write('export FLUPRO=/vol/optcoma/cr-simulations/fluka64\n')
 
-    outfile.write('use geant\n')
-    outfile.write('export RUNNR=`printf "%06d" $SLURM_ARRAY_TASK_ID`\n')
+    #outfile.write('use geant\n')
+    outfile.write('export RUNNR=`printf "%06d" $PBS_ARRAYID`\n')
     outfile.write('cd {0}/events/\n'.format(base_dir))
 
     outfile.write('mkdir -p {0}/events/{1}/corsika/{2}/steering/\n'.format(base_dir,event,type))
     outfile.write('rm -rf /scratch/kmulrey/{0}/{1}/$RUNNR\n'.format(event,part_id))
     outfile.write('mkdir -p /scratch/kmulrey/{0}/{1}/$RUNNR\n'.format(event,part_id))
-    outfile.write('python /vol/astro3/lofar/sim/kmulrey/beacon/BEACON_sims/geninp.py -r $RUNNR -s {0} -u {1} -a {2} -z {3} -t {5} -d /scratch/kmulrey/{4}/{5}/$RUNNR/ > /scratch/kmulrey/{4}/{5}/$RUNNR/RUN$RUNNR.inp\n'.format(seed,energy,azimuth,zenith,event,part_id))
+    outfile.write('python /user/kmulrey/beacon/BEACON_sims/geninp.py -r $RUNNR -s {0} -u {1} -a {2} -z {3} -t {5} -d /scratch/kmulrey/{4}/{5}/$RUNNR/ > /scratch/kmulrey/{4}/{5}/$RUNNR/RUN$RUNNR.inp\n'.format(seed,energy,azimuth,zenith,event,part_id))
 
-    outfile.write('cd /vol/optcoma/cr-simulations/corsika_production/run/\n')
-    outfile.write('./corsika77100Linux_QGSII_fluka_thin_conex < //scratch/kmulrey/{0}/{1}/$RUNNR/RUN$RUNNR.inp\n'.format(event,part_id))
+    outfile.write('cd /user/kmulrey/software/corsika-77100/run/\n')
+    outfile.write('./corsika77100Linux_QGSII_urqmd_thin_conex < //scratch/kmulrey/{0}/{1}/$RUNNR/RUN$RUNNR.inp\n'.format(event,part_id))
     outfile.write('cd /scratch/kmulrey/{0}/{1}/$RUNNR\n'.format(event,part_id))
     outfile.write('mv RUN$RUNNR.inp {0}/events/{1}/corsika/{2}/steering/RUN$RUNNR.inp\n'.format(base_dir,event,type))
     outfile.write('mv *.long {0}events/{1}/corsika/{2}/\n'.format(base_dir,event,type))
-    outfile.write('export LOFARSOFT=/vol/optcoma/pycrtools\n')
-    outfile.write('G4WORKDIR=$LOFARSOFT/LORA_simulation\n')
-    outfile.write('. /vol/optcoma/geant4_9.6_install/share/Geant4-9.6.4/geant4make/geant4make.sh\n')
-    outfile.write('/vol/optcoma/pycrtools/LORA_simulation/DAT2txt DAT$RUNNR DAT$RUNNR.tmp\n')
-    outfile.write('/vol/optcoma/pycrtools/LORA_simulation/LORA_simulation DAT$RUNNR.tmp DAT$RUNNR.lora\n')
+    #outfile.write('export LOFARSOFT=/vol/optcoma/pycrtools\n')
+    #outfile.write('G4WORKDIR=$LOFARSOFT/LORA_simulation\n')
+    outfile.write('source /software/geant4/geant4.9.6-install/bin/geant4.sh\n')
+    outfile.write('/software/geant4/LORA_simulation/DAT2txt DAT$RUNNR DAT$RUNNR.tmp\n')
+    outfile.write('/software/geant4/LORA_simulation DAT$RUNNR.tmp DAT$RUNNR.lora\n')
     outfile.write('rm DAT$RUNNR.tmp\n')
     
     outfile.write('cp -r * {0}events/{1}/corsika/{2}/\n'.format(base_dir,event,type))

@@ -10,6 +10,7 @@
 		417BF91024BDBDCB00C11815 /* geninp.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = geninp.py; sourceTree = "<group>"; };
 		417BF91124BDBDCB00C11815 /* write_job.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = write_job.py; sourceTree = "<group>"; };
 		417BF91224BDD2CF00C11815 /* submit.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = submit.sh; sourceTree = "<group>"; };
+		417BF91324BE021C00C11815 /* write_job_t2b.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = write_job_t2b.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -18,6 +19,7 @@
 			children = (
 				417BF91024BDBDCB00C11815 /* geninp.py */,
 				417BF91124BDBDCB00C11815 /* write_job.py */,
+				417BF91324BE021C00C11815 /* write_job_t2b.py */,
 				417BF91224BDD2CF00C11815 /* submit.sh */,
 			);
 			sourceTree = "<group>";
