@@ -11,6 +11,7 @@
 		417BF91124BDBDCB00C11815 /* write_job.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = write_job.py; sourceTree = "<group>"; };
 		417BF91224BDD2CF00C11815 /* submit.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = submit.sh; sourceTree = "<group>"; };
 		417BF91324BE021C00C11815 /* write_job_t2b.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = write_job_t2b.py; sourceTree = "<group>"; };
+		417BF91424BE07C900C11815 /* submit_t2b.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = submit_t2b.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -21,6 +22,7 @@
 				417BF91124BDBDCB00C11815 /* write_job.py */,
 				417BF91324BE021C00C11815 /* write_job_t2b.py */,
 				417BF91224BDD2CF00C11815 /* submit.sh */,
+				417BF91424BE07C900C11815 /* submit_t2b.sh */,
 			);
 			sourceTree = "<group>";
 		};
