@@ -4,7 +4,7 @@ from random import randint
 
 
 proton_dir='/user/kmulrey/beacon/BEACON_sims/jobs_proton/'
-iron_dir='/user/kmulrey/beacon/BEACON_sims/BEACON_sims/jobs_iron/'
+iron_dir='/user/kmulrey/beacon/BEACON_sims/jobs_iron/'
 
 base_dir='/user/kmulrey/beacon/BEACON_sims/'
 
