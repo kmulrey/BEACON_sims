@@ -1,5 +1,7 @@
 import numpy as np
 from random import random
+from random import randint
+
 
 proton_dir='/vol/astro3/lofar/sim/kmulrey/beacon/BEACON_sims/jobs_proton/'
 iron_dir='/vol/astro3/lofar/sim/kmulrey/beacon/BEACON_sims/jobs_iron/'
