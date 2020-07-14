@@ -8,7 +8,7 @@ qsub -t 1-15 10001_corsika_proton.q
 qsub -t 1-15 10002_corsika_proton.q
 qsub -t 1-15 10003_corsika_proton.q
 
-qsub -t 1-15 20000_ccorsika_proton.q
+qsub -t 1-15 20000_corsika_proton.q
 qsub -t 1-15 20001_corsika_proton.q
 qsub -t 1-15 20002_corsika_proton.q
 qsub -t 1-15 20003_corsika_proton.q
