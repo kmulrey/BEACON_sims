@@ -46,18 +46,9 @@ print "LONGI   T  10.  T  T                    longit.distr. & step size & fit &
 print "RADNKG  5.e5                           outer radius for NKG lat.dens.distr."
 print "DIRECT", options.dir,"                             output directory"
 print "DATBAS  F                              write .dbase file"
+print "ATMOD   1                              "
+
 print "USER    kmulrey                     user"
-
-
-if options.atmosphere:
-    if options.atmlayerfile is not None:
-        infile = open(options.atmlayerfile, 'r')
-        atmlay_line = infile.readline()
-        infile.close()
-        print atmlay_line.split('\n')[0]
-    
-    #print "ATMLAY 400000   1000000   4000000   10000000                           height of bottom of layers 2 to 5 (cm)"
-    print "ATMFILE " + options.atmfile
 
 print "PAROUT  T F"
 print "CASCADE F F F"
