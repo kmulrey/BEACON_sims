@@ -1,0 +1,75 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		417BF91024BDBDCB00C11815 /* geninp.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = geninp.py; sourceTree = "<group>"; };
+		417BF91124BDBDCB00C11815 /* write_job.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = write_job.py; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		417BF90924BDBD3B00C11815 = {
+			isa = PBXGroup;
+			children = (
+				417BF91024BDBDCB00C11815 /* geninp.py */,
+				417BF91124BDBDCB00C11815 /* write_job.py */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		417BF90A24BDBD3B00C11815 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = 417BF90D24BDBD3B00C11815 /* Build configuration list for PBXProject "BEACON_sims" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 417BF90924BDBD3B00C11815;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		417BF90E24BDBD3B00C11815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		417BF90F24BDBD3B00C11815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		417BF90D24BDBD3B00C11815 /* Build configuration list for PBXProject "BEACON_sims" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				417BF90E24BDBD3B00C11815 /* Debug */,
+				417BF90F24BDBD3B00C11815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 417BF90A24BDBD3B00C11815 /* Project object */;
+}
