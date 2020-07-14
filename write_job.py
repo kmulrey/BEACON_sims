@@ -51,7 +51,7 @@ def write_file(event, azimuth, zenith, energy, seed, type):
     #outfile.write('G4WORKDIR=$LOFARSOFT/LORA_simulation\n')
     outfile.write('source /software/geant4/geant4.9.6-install/bin/geant4.sh\n')
     outfile.write('/software/geant4/LORA_simulation/DAT2txt DAT$RUNNR DAT$RUNNR.tmp\n')
-    outfile.write('/software/geant4/LORA_simulation DAT$RUNNR.tmp DAT$RUNNR.lora\n')
+    outfile.write('/software/geant4/LORA_simulation/LORA_simulation DAT$RUNNR.tmp DAT$RUNNR.lora\n')
     outfile.write('rm DAT$RUNNR.tmp\n')
     
     outfile.write('cp -r * {0}events/{1}/corsika/{2}/\n'.format(base_dir,event,type))
